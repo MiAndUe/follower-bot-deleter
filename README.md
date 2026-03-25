@@ -1,9 +1,3 @@
-# Instagram Bot Guard — Data Export Edition
-
-A Python CLI tool that identifies and removes bot followers from your Instagram account by cross-referencing your official Instagram data export with live profile data.
-
----
-
 ## How It Works
 
 The tool runs in three phases.
@@ -12,7 +6,7 @@ The tool runs in three phases.
 It reads the two JSON files from your Instagram data export and compares your followers against the accounts you follow. Anyone you follow back is immediately skipped — they are never flagged. Only followers you do not follow back proceed to the next phase.
 
 **Phase 2 — Live Scan**
-For each remaining follower, the tool fetches their live profile stats from Instagram. An account is flagged as a likely bot if it has fewer than 50 followers and is following more than 1000 accounts. Results are saved to disk after every single account, so you can stop and resume at any time without losing progress.
+For each remaining follower, the tool fetches their live profile stats from Instagram. An account is flagged as a likely bot if it has fewer than 50 followers and is following more than 1000 accounts (this can be changed in detector.py, I based it on the bots that follow me). Results are saved to disk after every single account, so you can stop and resume at any time without losing progress.
 
 **Phase 3 — Review & Removal**
 The tool displays all flagged accounts and lets you add or remove anyone from the list manually before anything is deleted. A final confirmation prompt is shown before any removals are made.
@@ -22,8 +16,8 @@ The tool displays all flagged accounts and lets you add or remove anyone from th
 ## Project Structure
 
 ```
-instagram-bot-guard/
-├── data/                  # Place your Instagram export files here
+follower-bot-deleter/
+├── data/                  # Place your Instagram export files here (see below)
 │   ├── followers_1.json
 │   └── following.json
 ├── main.py                # Entry point — runs all three phases
