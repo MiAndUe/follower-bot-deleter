@@ -37,8 +37,8 @@ follower-bot-deleter/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/your-username/instagram-bot-guard.git
-cd instagram-bot-guard
+git clone https://github.com/your-username/follower-bot-deleter.git
+cd follower-bot-deleter
 ```
 
 **2. Create and activate a virtual environment**
