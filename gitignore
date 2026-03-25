@@ -1,0 +1,10 @@
+.env
+session.json
+data/
+real.json
+fake.json
+removal_report.json
+progress.json
+venv/
+__pycache__/
+*.pyc

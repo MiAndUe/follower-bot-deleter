@@ -1,0 +1,5 @@
+instagrapi
+tqdm
+python-dotenv
+requests
+Pillow
